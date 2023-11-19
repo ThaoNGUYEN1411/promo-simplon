@@ -1,0 +1,735 @@
+/* --------------------- CONFIGURATION --------------------- */
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  list-style: none;
+}
+
+:root {
+  --red: #ce0033;
+  --brokenBlack: #212529;
+  --white: #ffffff;
+  --black: #000000;
+  --brokenWhite: #f1f5f8;
+}
+
+/* ------------------------- NAV ------------------------- */
+
+nav {
+  background: white;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  margin-left: 20px;
+}
+
+#burger {
+  display: flex;
+  align-items: center;
+}
+
+#burger > ul {
+  margin-right: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+#burger > ul > li {
+  /* display: inline-block; */
+  /* line-height: 60px;
+  margin: 0px 5px; */
+  text-decoration: none;
+}
+
+#burger > ul > li > a {
+  /* color: #e9e9ed; */
+  color: #212529;
+  font-size: 17px;
+  padding: 7px 5px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  list-style: none;
+}
+
+#burger > ul > li > a.active {
+  color: #ce0033;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+#burger > ul > li > a:hover {
+  color: #ce0033;
+}
+
+.check-button {
+  font-size: 30px;
+  color: #e9e9ed;
+  float: right;
+  /* line-height: 60px; */
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 952px) {
+  label.logo {
+    padding-left: 20px;
+  }
+  #burger > ul > li > a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 695px) {
+  .check-button {
+    display: block;
+  }
+  #burger > ul {
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    width: 100%;
+    height: 30vh;
+    background: #f1f5f8;
+    top: 60px;
+    left: 100%;
+    transition: all 0.4s;
+  }
+  #burger > ul > li {
+    display: block;
+    /* margin: 50px 0px;
+    line-height: 30px; */
+    margin: 30px 0;
+  }
+  #burger > ul > li > a {
+    font-size: 20px;
+  }
+  a.active {
+    color: #ce0033;
+    font-weight: bold;
+    transition: 0.5s;
+  }
+  a:hover {
+    color: #ce0033;
+  }
+  #check:checked ~ ul {
+    left: 0px;
+  }
+
+  label.logo {
+    line-height: 75px;
+  }
+  .fa-solid,
+  .fas {
+    color: #f1f5f8;
+  }
+
+  #simplon {
+    margin-top: 30vh;
+  }
+}
+
+/* ------------------------- FIN NAV ------------------------- */
+
+/* ------------------------- SLIDER ------------------------- */
+
+h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 42px;
+  font-weight: 900;
+  margin: 30px 0;
+  text-align: center;
+  color: var(--red);
+}
+
+.para {
+  color: var(--brokenBlack);
+  font-size: 16px;
+  margin: 0 30px 30px 30px;
+  text-align: justify;
+}
+
+#simplon {
+  height: auto;
+  margin-bottom: 20vh;
+}
+
+.simplex {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+}
+
+#simplon > .collapse > .tutu > ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 25px;
+  list-style: none;
+  border: none;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.titu {
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.titu > li {
+  line-height: 30px;
+  list-style: circle;
+}
+
+#simplon > .collapse > .tutu > ul > li > img {
+  width: 50px;
+  height: 50px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.tata > .btn {
+  width: 50vw;
+  font-weight: 900;
+  background: var(--red);
+  border: 0;
+  color: white;
+  margin: 5vh 0;
+}
+
+.tata > .btn:hover {
+  background: var(--red);
+}
+
+.tata {
+  display: flex;
+  justify-content: center;
+}
+
+.titi {
+  padding-left: 0;
+}
+
+@media screen and (max-width: 860px) {
+  .simplex > figure > img {
+    width: 100vw;
+  }
+  .simplex {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 861px) {
+  .simplex > figure > img {
+    width: 50vw;
+    margin: 0 30px 0 0;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #carousel {
+    display: none;
+  }
+  #tel {
+    display: block;
+  }
+  .simplex > figure > img {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 577px) {
+  #carousel {
+    display: block;
+  }
+  #tel {
+    display: none;
+  }
+  .simplex > figure > img {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 431px) {
+  .tata > .btn {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 431px) {
+  .tata > .btn {
+    font-size: 15px;
+  }
+}
+/* ------------------------- FIN SLIDER ------------------------- */
+
+/* ------------------------- SIMPLON ET FORMATION ------------------------- */
+
+/* Début section simplon et formation */
+h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 42px;
+  font-weight: 900;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.toto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 15vw;
+  gap: 30px;
+}
+
+.para {
+  color: var(--brokenBlack);
+  font-size: 16px;
+  margin: 0 30px 30px 30px;
+  text-align: center;
+}
+
+.nombre {
+  color: var(--red);
+  font-size: 56px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.texte {
+  font-size: 20px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.toto > article {
+  height: 210px;
+  width: 210px;
+}
+
+#simplon {
+  height: auto;
+  margin-bottom: 20vh;
+}
+
+.titi > ul {
+  display: flex;
+  width: 90vw;
+  justify-content: space-around;
+  margin-top: 25px;
+  list-style: none;
+}
+
+#formation > .collapse > .titi > ul > li > img {
+  width: 25px;
+  height: 25px;
+  filter: grayscale(1);
+}
+
+#formation > .collapse > .titi > ul > li > img:hover {
+  width: 30px;
+  height: 30px;
+  filter: grayscale(0);
+  cursor: pointer;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.tata > .btn {
+  width: 50vw;
+  font-size: 24px;
+  font-weight: 900;
+  background: var(--red);
+  border: 0;
+  color: white;
+  margin: 5vh 0;
+}
+
+.tata > .btn:hover {
+  background: var(--red);
+}
+
+.tata {
+  display: flex;
+  justify-content: center;
+}
+
+/* Debut section promo */
+
+/* Debut section promo */
+/* Debut le filtre */
+.control {
+  text-align: center;
+}
+.hide {
+  display: none !important;
+}
+.button-filtre {
+  padding: 5px 20px;
+  margin: 10px 20px 30px;
+  border: 1px solid var(--red);
+  background: var(--brokenWhite);
+  color: var(--black);
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+
+.button-filtre:hover {
+  background: red;
+}
+/* Fin le filtre */
+
+.promo {
+  width: 100%;
+
+  /* responsev */
+  /* max-width: 1200px; */
+  margin: auto;
+  /* background-image: url(img/luca-bravo-9l_326FISzk-unsplash.jpg);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center; */
+}
+.promo h2 {
+  text-align: center;
+}
+.content {
+  background: var(--brokenWhite);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.item {
+  height: 450px;
+  min-width: 300px;
+  border-top: 4px solid var(--red);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: var(--white);
+  box-shadow: 1px 1px 10px rgb(211, 210, 210);
+}
+
+.anim {
+  position: relative;
+  animation-name: example;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes example {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 20px;
+  }
+}
+
+/* Card */
+
+.social-links,
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-btn {
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+  color: var(--brokenBlack);
+  border-radius: 10px;
+  /* box-shadow: 0px 10px 10px rgba(0,0,0,0.1); */
+  background: var(--brokenWhite);
+  margin: 5px;
+  transition: 0.3s;
+  justify-content: center;
+}
+
+.social-btn svg {
+  height: 18px;
+  width: 18px;
+}
+
+.social-btn span {
+  width: 0px;
+  overflow: hidden;
+  transition: 0.3s;
+  text-align: center;
+  margin-left: 5px;
+}
+
+.social-btn:hover {
+  width: 150px;
+  border-radius: 5px;
+}
+
+.social-btn:hover span {
+  padding: 2px;
+  width: 80px;
+}
+
+#twitter svg,
+#linkedin svg,
+#github,
+#info_profil img {
+  fill: var(--red);
+}
+
+.img_profil {
+  width: 300px;
+}
+.img_profil > img {
+  width: 100%;
+  border-bottom-left-radius: 100px;
+}
+
+.imgApprenant > img {
+  width: 100%;
+  border-bottom-left-radius: 100px;
+}
+
+.body_card {
+  padding-left: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.body_card > :is(h3, h4) {
+  margin-bottom: 0;
+}
+
+.body_card > p {
+  margin-top: 20px;
+}
+
+.button_modal {
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+
+.button_modal > btn {
+  width: 50px;
+}
+
+/* component#4 */
+
+.share {
+  position: absolute;
+  right: 70px;
+}
+
+/* fin section promo */
+
+/*  Début Section équipe pédagogique */
+
+#equipe {
+  background-color: var(--brokenWhite);
+  min-height: 800px;
+  padding: 80px 0;
+}
+
+#equipe > div {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+#equipe > h2 {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 900;
+  color: var(--red);
+  margin-bottom: 80px;
+}
+
+#equipe > div > article > div > h3 {
+  color: var(--brokenBlack);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+#equipe > div > article > div > a > img {
+  width: 25px;
+  height: 25px;
+}
+
+#equipe > div > article > div > a {
+  position: absolute;
+  bottom: 20px;
+}
+
+#equipe > div > article {
+  width: 320px;
+  height: 450px;
+  position: relative;
+  background-color: var(--white);
+  border-top: 4px solid var(--red);
+}
+
+.imgFormateur > img {
+  width: 100%;
+}
+
+.cardFormateur {
+  margin-left: 10px;
+}
+
+/* ------------------------- FIN SIMPLON ET FORMATION ------------------------- */
+
+/* --------------------- FOOTER ------------------------- */
+
+footer {
+  /* position: fixed; */
+  bottom: 0px;
+  width: 100%;
+  background: #f1f5f8;
+}
+
+footer a,
+p {
+  color: #212529;
+}
+
+.footer-complet {
+  display: flex;
+}
+hr {
+  color: #ce0033;
+  border-top: 0px;
+}
+
+.footer-complet .box {
+  flex-basis: 50%;
+  padding: 10px 20px;
+  margin: 20px 20px;
+}
+.box h2 {
+  font-size: 17px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #212529;
+}
+.box .contenu {
+  margin: 20px 0px 0px 0px;
+  position: relative;
+}
+.left .contenu p {
+  text-align: justify;
+}
+.left .contenu .reseaux {
+  margin: 20px 0px 0px 0px;
+}
+.left .contenu .reseaux a {
+  padding: 0px 2px;
+}
+.left .contenu .reseaux a span {
+  height: 40px;
+  width: 40px;
+  background: #212529;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+#facebook:hover {
+  background: #1278f3;
+  transform: scale(1.2);
+}
+#twitter:hover {
+  background: #1d9bf0;
+  transform: scale(1.1);
+}
+#linkedin:hover {
+  background: #0a66c2;
+  transform: scale(1.1);
+}
+#youtube:hover {
+  background: #ff0000;
+  transform: scale(1.1);
+}
+
+.middle .contenu .fas {
+  font-size: 23px;
+  background: #212529;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.middle .contenu .fas:hover {
+  background: #ce0033;
+}
+.middle .contenu .texte {
+  font-size: 16px;
+  font-weight: 500;
+  padding-left: 10px;
+}
+.middle .contenu .telephone {
+  margin: 15px 0px;
+}
+
+@media screen and (max-width: 900px) {
+  footer {
+    position: relative;
+    bottom: 0px;
+  }
+  .footer-complet {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .footer-complet .box {
+    margin: 5px 0px;
+  }
+}
+
+.box1-links:hover {
+  color: #ce0033;
+}
+
+.middle .contenu .texte a:hover {
+  color: #ce0033;
+}
+
+/* ------------------------- FIN FOOTER ------------------------- */
